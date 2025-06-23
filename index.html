@@ -552,6 +552,82 @@
         font-size: 17px;
     }
 
+    .solutions {
+        display: flex;
+        gap: 60px 20px;
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    .solutions .solution {
+        width: 270px;
+        height: 248px;
+        border: 1px solid rgba(100, 130, 254, .12);
+        border-radius: 25px;
+        display: flex;
+        align-items: flex-end;
+        padding: 30px 40px 80px 40px;
+        box-shadow: 0 7px 10px 5px rgba(0, 114, 188, .12);
+        position: relative;
+    }
+
+    .solutions .solution > p {
+        font-weight: 600;
+        font-size: 17px;
+        height: 35px;
+    }
+
+    .solutions .gerb-icon:after,
+    .solutions .sun-icon:after,
+    .solutions .diagram-icon:after,
+    .solutions .medusa-icon:after,
+    .solutions .weighter-icon:after,
+    .solutions .shield-icon:after,
+    .solutions .mini-shield-icon:after,
+    .solutions .list-icon:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .solutions .gerb-icon:after {
+        background: url(src/img/solutions/gerb.svg) no-repeat center / 40px;
+    }
+
+    .solutions .sun-icon:after {
+        background: url(src/img/solutions/sun.svg) no-repeat center / 40px;
+    }
+
+    .solutions .diagram-icon:after {
+        background: url(src/img/solutions/diagram.svg) no-repeat center / 40px;
+    }
+
+    .solutions .medusa-icon:after {
+        background: url(src/img/solutions/medusa.svg) no-repeat center / 40px;
+    }
+
+    .solutions .weighter-icon:after {
+        background: url(src/img/solutions/weighter.svg) no-repeat center / 40px;
+    }
+
+    .solutions .shield-icon:after {
+        background: url(src/img/solutions/shield.svg) no-repeat center / 40px;
+    }
+
+    .solutions .mini-shield-icon:after {
+        background: url(src/img/solutions/mini-shield.svg) no-repeat center / 40px;
+    }
+
+    .solutions .list-icon:after {
+        background: url(src/img/solutions/list.svg) no-repeat center / 40px;
+    }
+
     /* Моя херня (конец) */
 
     @media screen and (max-width: 1350px) {
@@ -833,8 +909,36 @@
         </div>
     </div>
 </section>
-<!-- Моя херня (конец) -->
 
+<section class="section-solutions">
+    <div class="solutions">
+        <div class="solution gerb-icon">
+            <p>100% отечественное решение</p>
+        </div>
+        <div class="solution sun-icon">
+            <p>Гибкая настройка под  требования и бизнес-процессы</p>
+        </div>
+        <div class="solution diagram-icon">
+            <p>Закрывает все ключевые задачи, решаемые через SAP SuccessFactors</p>
+        </div>
+        <div class="solution medusa-icon">
+            <p>Плановый переход с зарубежных HCM-систем</p>
+        </div>
+        <div class="solution weighter-icon">
+            <p>Стоимость не зависит от валютных колебаний и зарубежных лицензий</p>
+        </div>
+        <div class="solution shield-icon">
+            <p>Возможности системы соответствуют уровню ведущих решений</p>
+        </div>
+        <div class="solution mini-shield-icon">
+            <p>Наивысший уровень безопасности</p>
+        </div>
+        <div class="solution list-icon">
+            <p>Решение соответствует требованиям 152-ФЗ</p>
+        </div>
+    </div>
+</section>
+<!-- Моя херня (конец) -->
 <div class="b-footer">
     <div class="b-footer__row">
         <div class="wrapper">

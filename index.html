@@ -452,6 +452,8 @@
         margin-left: -40px;
     }
 
+    /* Секция "ВЕСЬ ФУНКЦИОНАЛ" */
+
     .swiper {
         max-width: 1140px;
         margin: 0 auto;
@@ -556,6 +558,8 @@
         font-size: 17px;
     }
 
+    /* Секция "БЕЗОПАСНОЕ РОССИЙСКОЕ РЕШЕНИЕ" */
+
     .section-solutions {
         margin-top: 30px;
     }
@@ -653,6 +657,275 @@
 
     .solutions .list-icon:after {
         background: url(src/img/solutions/list.svg) no-repeat center / 40px;
+    }
+
+    /* Секция "Калькулятор" */
+
+    .calculator {
+        width: 100%;
+        border-radius: 30px;
+        background-color: #e6f1f9;
+        padding: 100px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .calculator input {
+        border: none;
+        outline: none;
+    }
+
+    .calculator__title,
+    .calculator__title > span {
+        font-size: 30px;
+    }
+
+    .calc-form-wrapper {
+        width: 100%;
+        max-width: 844px;
+    }
+
+    .calc-form {
+        width: 100%;
+    }
+
+    .calculator__title,
+    .calc-form-wrapper > span {
+        text-align: center;
+    }
+
+    .calculator__title > span {
+        color: var(--main-color);
+    }
+
+    .calc-form-wrapper {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calc-form-wrapper > span {
+        display: block;
+        font-size: 20px;
+    }
+
+    .form-inputs-wrapper {
+        margin-top: 30px;
+        display: grid;
+        grid: 1fr / repeat(2, minmax(10px, 413px));
+        gap: 18px;
+    }
+
+    .form-btns-wrapper {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .form-btns-wrapper > * {
+        width: 220px;
+        padding: 15px;
+        border: 1px solid var(--main-color);
+        border-radius: 7px;
+        display: block;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .form-btns-wrapper > .calc-request {
+        color: var(--main-color);
+        text-decoration: none;
+    }
+
+    .form-btns-wrapper > .calc-btn {
+        background-color: var(--main-color);
+    }
+
+    .form-inputs-wrapper input::placeholder {
+        color: #aaa;
+    }
+
+    .form-inputs-wrapper :where(input, select) {
+        border-radius: 10px;
+        padding: 15px 47px 15px 15px;
+        width: 100%;
+        max-width: 413px;
+    }
+
+    .form-inputs-wrapper:has(select) :where(input, select) {
+        padding: 15px 6px 15px 15px;
+        color: #aaaaaa;
+    }
+
+    .form-inputs-wrapper select {
+        cursor: pointer;
+        color: #aaaaaa;
+    }
+
+    .calc-input-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    .info-mark {
+        pointer-events: all;
+    }
+
+    .calc-input-wrapper > .info-mark {
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 12px);
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background: url('../img/calculator/info.svg') no-repeat center / 20px;
+    }
+
+    .functions-table-wrapper {
+        background-color: #fff;
+        padding: 0 40px;
+        border-radius: 20px;
+        margin-top: 40px;
+        width: 1140px;
+        max-width: 1140px;
+        position: relative;
+    }
+
+    .functions-table-wrapper:before {
+        content: '';
+        display: block;
+        width: calc(((100% / 3) + (100% / 3)) - 13px);
+        height: calc(100% + 20px);
+        border-radius: 20px 0 0 20px;
+        position: absolute;
+        top: -20px;
+        right: 0;
+        background-color: #eaedf9;
+    }
+
+    .functions-table-wrapper:after {
+        content: '';
+        display: block;
+        width: calc(100% / 3 + 13px);
+        height: calc(100% + 35px);
+        border-radius: 20px;
+        position: absolute;
+        top: -35px;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 0 7px 1px #999;
+    }
+
+    .functions-table {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .functions-table, tr, td, th {
+        border-collapse: collapse;
+    }
+
+    .functions-table tr {
+        border-bottom: 1px solid #bbbdc1;
+    }
+
+    .functions-table tbody tr:last-child {
+        border-bottom: none;
+    }
+
+    .functions-table th {
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .functions-table th,
+    .functions-table td {
+        padding: 25px;
+        position: relative;
+        width: calc(100% / 3);
+    }
+
+    .functions-table td {
+        font-size: 14px;
+    }
+
+    .functions-table th span,
+    .functions-table td span {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+    }
+
+    .functions-table th span {
+        color: #0072bc;
+    }
+
+    .table-wrapper .tariff-title > .tariff-period > .info-mark,
+    .table-sticky-header .tariff-title > .tariff-period > .info-mark {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .table-wrapper .tariff-title > .tariff-period > .info-mark {
+        background: url('../img/calculator/info.svg') no-repeat center / 20px;
+    }
+
+    .table-sticky-header .tariff-title > .tariff-period > .info-mark {
+        background: url('../img/calculator/info-bright.svg') no-repeat center / 20px;
+    }
+
+    .info-mark > .hint {
+        position: absolute;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #fff;
+        min-width: 300px;
+        max-width: 500px;
+        top: 100%;
+        left: 100%;
+        box-shadow: 0 0 10px -1px #000;
+        z-index: 10;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s;
+    }
+
+    .calc-input-wrapper > .info-mark > .hint {
+        top: calc(100% + 10px);
+        left: -200px;
+    }
+
+    .info-mark:hover > .hint {
+        opacity: 1;
+    }
+
+    .table-sticky-header .hint,
+    .table-wrapper .table-row-title:first-child .hint {
+        white-space: normal;
+        top: calc(100% + 10px);
+        left: auto;
+        right: 0;
+        min-width: 100px;
+        max-width: 135px;
+        text-align: center;
+        color: #000;
+    }
+
+    .tick {
+        background: url('../img/calculator/tick.svg') no-repeat center / 18px;
+    }
+
+    .cross {
+        background: url('../img/calculator/cross.svg') no-repeat center / 18px;
     }
 
     /* Моя херня (конец) */
@@ -973,7 +1246,100 @@
         </div>
     </div>
 </section>
+
+<section class="calculator">
+    <h2 class="calculator__title">TARIFF PLANS FOR <span>THE CLOUD VERSION</span></h2>
+    <article class="calc-form-wrapper">
+        <span>Fill in the fields to calculate prices</span>
+        <form class="calc-form" id="calc-form" action="#" method="POST">
+            <div class="form-inputs-wrapper">
+                <input class="calc-form-field" id="number_of_recruiters" name="number_of_recruiters" type="number" placeholder="Number of recruiters" aria-label="Number of recruiters">
+                <div class="calc-input-wrapper">
+                    <input class="calc-form-field" id="internal_customers" name="internal_customers" type="number" placeholder="Simultaneous sessions of internal customers" aria-label="Simultaneous sessions of internal customers">
+                    <div class="info-mark">
+                        <div class="hint">
+                            <p>Simultaneous connections to the database by users with roles: internal customer, security department employee, etc. If the number of connections exceeds 50, the price is on request</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-btns-wrapper">
+                <a class="form-btn calc-request" id="calc-request" href="#">Request an invoice</a>
+                <button class="form-btn calc-btn" id="calc-btn" type="button">Сalculate</button>
+            </div>
+        </form>
+    </article>
+    <article class="functions-table-wrapper">
+        <table class="functions-table">
+            <thead>
+                <tr>
+                    <th>Модуль / Функции</th>
+                    <th><span>SAP SuccessFactors / Workday</span></th>
+                    <th><span>ТопФактор HRM</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span>Управление целями и результативностью</span></td>
+                    <td><span>Performance Management</span></td>
+                    <td><span>SMART-цели, карты целей, 1-on-1 встречи</span></td>
+                </tr>
+                <tr>
+                    <td><span>Развитие и обучение сотрудников</span></td>
+                    <td><span>Learning / Development Plans</span></td>
+                    <td><span>ИПР, развитие, планы преемственности</span></td>
+                </tr>
+                <tr>
+                    <td><span>Оценка сотрудников</span></td>
+                    <td><span>360 Feedback, Competency Review</span></td>
+                    <td><span>Оценка по KPI, ценностям, компетенциям</span></td>
+                </tr>
+                <tr>
+                    <td><span>Управление компенсациями и премиями </span></td>
+                    <td><span>Variable Pay / Compensation</span></td>
+                    <td><span>Расчёт KPI-премий, пересмотр ЗП</span></td>
+                </tr>
+                <tr>
+                    <td><span>Расчёт заработной платы (Payroll)</span></td>
+                    <td><span>Да, как отдельный модуль</span></td>
+                    <td><span>Модуль расчёта зарплаты (интеграция с 1С)</span></td>
+                </tr>
+                <tr>
+                    <td><span>Оргструктура и кадровый учёт</span></td>
+                    <td><span>Employee Central</span></td>
+                    <td><span>Управление оргструктурой, синхронизация с 1С</span></td>
+                </tr>
+                <tr>
+                    <td><span>Кадровый электронный документооборот (КЭДО)</span></td>
+                    <td><span>Частично (через партнёров)</span></td>
+                    <td><span>Встроенный модуль КЭДО</span></td>
+                </tr>
+                <tr>
+                    <td><span>HR-аналитика и отчёты</span></td>
+                    <td><span>Встроенная / через BI</span></td>
+                    <td><span>BI-интеграции, визуальные дашборды</span></td>
+                </tr>
+                <tr>
+                    <td><span>Опросы и вовлечённость сотрудников</span></td>
+                    <td><span>Engagement Surveys</span></td>
+                    <td><span>Опросы, индекс вовлечённости, eNPS</span></td>
+                </tr>
+                <tr>
+                    <td><span>Рекрутмент и адаптация (onboarding)</span></td>
+                    <td><span>Recruitment</span></td>
+                    <td><span>Встроенные модули или интеграция</span></td>
+                </tr>
+                <tr>
+                    <td><span>Корпоративная база знаний / LMS</span></td>
+                    <td><span>Через LMS-платформу</span></td>
+                    <td><span>Встроенная Wiki / интеграция с обучающими платформами</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
 <!-- Моя херня (конец) -->
+
 <div class="b-footer">
     <div class="b-footer__row">
         <div class="wrapper">

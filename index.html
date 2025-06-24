@@ -852,6 +852,16 @@
         width: calc(100% / 3);
     }
 
+    .functions-table th:first-child,
+    .functions-table td:first-child {
+        padding-left: 0;
+    }
+
+    .functions-table td:nth-child(2),
+    .functions-table td:nth-child(3) {
+        padding-left: 52px;
+    }
+
     .functions-table td {
         font-size: 14px;
     }
@@ -867,20 +877,10 @@
         color: #0072bc;
     }
 
-    .table-wrapper .tariff-title > .tariff-period > .info-mark,
-    .table-sticky-header .tariff-title > .tariff-period > .info-mark {
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        position: relative;
-    }
-
-    .table-wrapper .tariff-title > .tariff-period > .info-mark {
-        background: url('../img/calculator/info.svg') no-repeat center / 20px;
-    }
-
-    .table-sticky-header .tariff-title > .tariff-period > .info-mark {
-        background: url('../img/calculator/info-bright.svg') no-repeat center / 20px;
+    .function-table-title {
+        align-self: flex-start;
+        margin-top: 40px;
+        padding: 0 40px;
     }
 
     .info-mark > .hint {
@@ -920,12 +920,28 @@
         color: #000;
     }
 
-    .tick {
-        background: url('../img/calculator/tick.svg') no-repeat center / 18px;
+    .tick,
+    .cross {
+        position: relative;
     }
 
-    .cross {
-        background: url('../img/calculator/cross.svg') no-repeat center / 18px;
+    .tick:before,
+    .cross:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 23px;
+        width: 23px;
+        height: 23px;
+    }
+
+    .tick:before {
+        background: url('src/img/calculator/tick.svg') no-repeat center / 23px;
+    }
+
+    .cross:before {
+        background: url('src/img/calculator/cross.svg') no-repeat center / 23px;
     }
 
     /* Моя херня (конец) */
@@ -1269,6 +1285,7 @@
             </div>
         </form>
     </article>
+    <h2 class="function-table-title">Tariffs and costs</h2>
     <article class="functions-table-wrapper">
         <table class="functions-table">
             <thead>
@@ -1281,58 +1298,58 @@
             <tbody>
                 <tr>
                     <td><span>Управление целями и результативностью</span></td>
-                    <td><span>Performance Management</span></td>
-                    <td><span>SMART-цели, карты целей, 1-on-1 встречи</span></td>
+                    <td class="tick"><span>Performance Management</span></td>
+                    <td class="tick"><span>SMART-цели, карты целей, 1-on-1 встречи</span></td>
                 </tr>
                 <tr>
                     <td><span>Развитие и обучение сотрудников</span></td>
-                    <td><span>Learning / Development Plans</span></td>
-                    <td><span>ИПР, развитие, планы преемственности</span></td>
+                    <td class="tick"><span>Learning / Development Plans</span></td>
+                    <td class="tick"><span>ИПР, развитие, планы преемственности</span></td>
                 </tr>
                 <tr>
                     <td><span>Оценка сотрудников</span></td>
-                    <td><span>360 Feedback, Competency Review</span></td>
-                    <td><span>Оценка по KPI, ценностям, компетенциям</span></td>
+                    <td class="tick"><span>360 Feedback, Competency Review</span></td>
+                    <td class="tick"><span>Оценка по KPI, ценностям, компетенциям</span></td>
                 </tr>
                 <tr>
                     <td><span>Управление компенсациями и премиями </span></td>
-                    <td><span>Variable Pay / Compensation</span></td>
-                    <td><span>Расчёт KPI-премий, пересмотр ЗП</span></td>
+                    <td class="tick"><span>Variable Pay / Compensation</span></td>
+                    <td class="tick"><span>Расчёт KPI-премий, пересмотр ЗП</span></td>
                 </tr>
                 <tr>
                     <td><span>Расчёт заработной платы (Payroll)</span></td>
-                    <td><span>Да, как отдельный модуль</span></td>
-                    <td><span>Модуль расчёта зарплаты (интеграция с 1С)</span></td>
+                    <td class="tick"><span>Да, как отдельный модуль</span></td>
+                    <td class="tick"><span>Модуль расчёта зарплаты (интеграция с 1С)</span></td>
                 </tr>
                 <tr>
                     <td><span>Оргструктура и кадровый учёт</span></td>
-                    <td><span>Employee Central</span></td>
-                    <td><span>Управление оргструктурой, синхронизация с 1С</span></td>
+                    <td class="tick"><span>Employee Central</span></td>
+                    <td class="tick"><span>Управление оргструктурой, синхронизация с 1С</span></td>
                 </tr>
                 <tr>
                     <td><span>Кадровый электронный документооборот (КЭДО)</span></td>
-                    <td><span>Частично (через партнёров)</span></td>
-                    <td><span>Встроенный модуль КЭДО</span></td>
+                    <td class="cross"><span>Частично (через партнёров)</span></td>
+                    <td class="tick"><span>Встроенный модуль КЭДО</span></td>
                 </tr>
                 <tr>
                     <td><span>HR-аналитика и отчёты</span></td>
-                    <td><span>Встроенная / через BI</span></td>
-                    <td><span>BI-интеграции, визуальные дашборды</span></td>
+                    <td class="tick"><span>Встроенная / через BI</span></td>
+                    <td class="tick"><span>BI-интеграции, визуальные дашборды</span></td>
                 </tr>
                 <tr>
                     <td><span>Опросы и вовлечённость сотрудников</span></td>
-                    <td><span>Engagement Surveys</span></td>
-                    <td><span>Опросы, индекс вовлечённости, eNPS</span></td>
+                    <td class="tick"><span>Engagement Surveys</span></td>
+                    <td class="tick"><span>Опросы, индекс вовлечённости, eNPS</span></td>
                 </tr>
                 <tr>
-                    <td><span>Рекрутмент и адаптация (onboarding)</span></td>
-                    <td><span>Recruitment</span></td>
-                    <td><span>Встроенные модули или интеграция</span></td>
+                    <td class="tick"><span>Рекрутмент и адаптация (onboarding)</span></td>
+                    <td class="tick"><span>Recruitment</span></td>
+                    <td class="tick"><span>Встроенные модули или интеграция</span></td>
                 </tr>
                 <tr>
-                    <td><span>Корпоративная база знаний / LMS</span></td>
-                    <td><span>Через LMS-платформу</span></td>
-                    <td><span>Встроенная Wiki / интеграция с обучающими платформами</span></td>
+                    <td class="tick"><span>Корпоративная база знаний / LMS</span></td>
+                    <td class="tick"><span>Через LMS-платформу</span></td>
+                    <td class="tick"><span>Встроенная Wiki / интеграция с обучающими платформами</span></td>
                 </tr>
             </tbody>
         </table>

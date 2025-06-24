@@ -470,6 +470,10 @@
         color: #0072bc;
     }
 
+    .thumbs-slider-wrapper {
+        margin-top: 30px;
+    }
+
     .thumbs-slider-wrapper .swiper-slide-thumb-active {
         background-color: #e6f1f9;
     }
@@ -552,12 +556,36 @@
         font-size: 17px;
     }
 
+    .section-solutions {
+        margin-top: 30px;
+    }
+
+    .header-article {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1140px;
+    }
+
+    .header-article > h2 {
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    .header-article > h2 > span {
+        color: #0072bc;
+    }
+
+    .header-article-slogan {
+        display: block;
+        margin-top: 10px;
+    }
+
     .solutions {
         display: flex;
         gap: 60px 20px;
         width: 100%;
         max-width: 1140px;
-        margin: 0 auto;
+        margin: 70px auto 0 auto;
         flex-wrap: wrap;
     }
 
@@ -568,13 +596,12 @@
         border-radius: 25px;
         display: flex;
         align-items: flex-end;
-        padding: 30px 40px 80px 40px;
+        padding: 30px 25px 80px;
         box-shadow: 0 7px 10px 5px rgba(0, 114, 188, .12);
         position: relative;
     }
 
     .solutions .solution > p {
-        font-weight: 600;
         font-size: 17px;
         height: 35px;
     }
@@ -724,6 +751,10 @@
 
 <!-- Моя херня (начало) -->
 <section class="slider-section">
+    <div class="header-article">
+        <h2>ВЕСЬ ФУНКЦИОНАЛ — <span>В ОДНОМ ОКНЕ</span></h2>
+        <span class="header-article-slogan">Подзаголовок с кратким описанием</span>
+    </div>
     <div class="swiper thumbs-slider-wrapper">
         <div class="swiper-wrapper">
             <div class="swiper-slide swiper-thumb">Цели и Performance review</div>
@@ -911,6 +942,10 @@
 </section>
 
 <section class="section-solutions">
+    <div class="header-article">
+        <h2>БЕЗОПАСНОЕ РОССИЙСКОЕ РЕШЕНИЕ</h2>
+        <span class="header-article-slogan">Полноценная альтернатива SAP SuccessFactors и другим зарубежным HCM-системам</span>
+    </div>
     <div class="solutions">
         <div class="solution gerb-icon">
             <p>100% отечественное решение</p>

@@ -470,6 +470,7 @@
         padding: 12px 25px;
         cursor: pointer;
         color: #0072bc;
+        user-select: none;
     }
 
     .thumbs-slider-wrapper {
@@ -586,11 +587,12 @@
 
     .solutions {
         display: flex;
-        gap: 60px 20px;
+        gap: 20px;
         width: 100%;
         max-width: 1140px;
         margin: 70px auto 0 auto;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .solutions .solution {
@@ -663,137 +665,38 @@
 
     .calculator {
         width: 100%;
-        border-radius: 30px;
-        background-color: #e6f1f9;
-        padding: 100px 60px;
+        padding: 0 60px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 40px;
-    }
-
-    .calculator input {
-        border: none;
-        outline: none;
-    }
-
-    .calculator__title,
-    .calculator__title > span {
-        font-size: 30px;
-    }
-
-    .calc-form-wrapper {
-        width: 100%;
-        max-width: 844px;
-    }
-
-    .calc-form {
-        width: 100%;
-    }
-
-    .calculator__title,
-    .calc-form-wrapper > span {
-        text-align: center;
-    }
-
-    .calculator__title > span {
-        color: var(--main-color);
-    }
-
-    .calc-form-wrapper {
-        margin-top: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .calc-form-wrapper > span {
-        display: block;
-        font-size: 20px;
-    }
-
-    .form-inputs-wrapper {
-        margin-top: 30px;
-        display: grid;
-        grid: 1fr / repeat(2, minmax(10px, 413px));
-        gap: 18px;
-    }
-
-    .form-btns-wrapper {
-        margin-top: 35px;
-        display: flex;
-        justify-content: center;
-        gap: 18px;
-    }
-
-    .form-btns-wrapper > * {
-        width: 220px;
-        padding: 15px;
-        border: 1px solid var(--main-color);
-        border-radius: 7px;
-        display: block;
-        text-align: center;
-        color: #fff;
-        cursor: pointer;
-        font-size: 18px;
-    }
-
-    .form-btns-wrapper > .calc-request {
-        color: var(--main-color);
-        text-decoration: none;
-    }
-
-    .form-btns-wrapper > .calc-btn {
-        background-color: var(--main-color);
-    }
-
-    .form-inputs-wrapper input::placeholder {
-        color: #aaa;
-    }
-
-    .form-inputs-wrapper :where(input, select) {
-        border-radius: 10px;
-        padding: 15px 47px 15px 15px;
-        width: 100%;
-        max-width: 413px;
-    }
-
-    .form-inputs-wrapper:has(select) :where(input, select) {
-        padding: 15px 6px 15px 15px;
-        color: #aaaaaa;
-    }
-
-    .form-inputs-wrapper select {
-        cursor: pointer;
-        color: #aaaaaa;
-    }
-
-    .calc-input-wrapper {
+        margin-top: 120px;
         position: relative;
-        width: 100%;
     }
 
-    .info-mark {
-        pointer-events: all;
-    }
-
-    .calc-input-wrapper > .info-mark {
+    .finger {
+        display: none;
         position: absolute;
-        top: 50%;
-        left: calc(100% + 12px);
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        background: url('../img/calculator/info.svg') no-repeat center / 20px;
+        bottom: calc(100% + 10px);
+        right: 60px;
+        background: url('src/img/calculator/finger.svg') no-repeat center / 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .special-table-wrapper {
+        overflow: auto;
+        padding: 0 10px 10px 0;
+        width: 100%;
+        max-width: 1145px;
     }
 
     .functions-table-wrapper {
-        background-color: #fff;
+        background-color: #f4f3f3;
         padding: 0 40px;
         border-radius: 20px;
         margin-top: 40px;
-        width: 1140px;
-        max-width: 1140px;
+        width: 1135px;
+        max-width: 1135px;
         position: relative;
     }
 
@@ -818,7 +721,7 @@
         position: absolute;
         top: -35px;
         right: 0;
-        background-color: #fff;
+        background-color: #f4f3f3;
         box-shadow: 0 0 7px 1px #999;
     }
 
@@ -877,50 +780,6 @@
         color: #0072bc;
     }
 
-    .function-table-title {
-        align-self: flex-start;
-        margin: 40px auto 0;
-        width: 1140px;
-        max-width: 1140px;
-    }
-
-    .info-mark > .hint {
-        position: absolute;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: #fff;
-        min-width: 300px;
-        max-width: 500px;
-        top: 100%;
-        left: 100%;
-        box-shadow: 0 0 10px -1px #000;
-        z-index: 10;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity .3s;
-    }
-
-    .calc-input-wrapper > .info-mark > .hint {
-        top: calc(100% + 10px);
-        left: -200px;
-    }
-
-    .info-mark:hover > .hint {
-        opacity: 1;
-    }
-
-    .table-sticky-header .hint,
-    .table-wrapper .table-row-title:first-child .hint {
-        white-space: normal;
-        top: calc(100% + 10px);
-        left: auto;
-        right: 0;
-        min-width: 100px;
-        max-width: 135px;
-        text-align: center;
-        color: #000;
-    }
-
     .tick,
     .cross {
         position: relative;
@@ -943,6 +802,28 @@
 
     .cross:before {
         background: url('src/img/calculator/cross.svg') no-repeat center / 23px;
+    }
+
+    /* Секция "Management" */
+
+    .management .section-content-wrapper {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .management .management-row-wrapper {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .management .management-row-wrapper {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
     }
 
     /* Моя херня (конец) */
@@ -998,6 +879,13 @@
         .article__slide > .landing-btns-wrapper .article__slide__demo-btn {
             margin-top: 0;
         }
+
+        .header-article,
+        .thumbs-slider-wrapper,
+        .main-slider-wrapper {
+            padding: 0 20px;
+        }
+
         /* Моя херня (конец) */
 
         .article__slide > .article__slide__img-wrapper {
@@ -1010,11 +898,83 @@
         }
     }
 
+    /* Моя херня (начало) */
+    @media screen and (max-width: 769px) {
+        .advantages-content {
+            flex-direction: column;
+        }
+
+        .want-demo {
+            display: block;
+            width: 100%;
+        }
+
+        .finger {
+            display: block;
+        }
+    }
+
     @media screen and (max-width: 621px) {
         .article__slide > .article__slide__img-wrapper {
             transform: translateX(7%);
         }
+
+        .finger {
+            right: 20px;
+        }
     }
+
+    @media screen and (max-width: 585px) {
+        .landing-btns-wrapper {
+            flex-wrap: wrap;
+        }
+
+        .article__slide > .landing-btns-wrapper .article__slide__demo-btn {
+            width: 100%;
+        }
+
+        .functions-table-wrapper:before {
+            width: calc(((100% / 3) + (100% / 3)) - 6px);
+        }
+
+        .functions-table-wrapper {
+            padding: 0 20px;
+        }
+
+        .calculator {
+            padding: 0;
+        }
+    }
+
+    @media screen and (max-width: 426px) {
+        .functions-table th, .functions-table td {
+            width: auto;
+        }
+
+        .functions-table-wrapper:before {
+            width: calc(((100% / 3) + (100% / 3)) + 13px);
+        }
+
+        .functions-table-wrapper:after {
+            width: calc(100% / 3 + 32px);
+        }
+
+        .functions-table {
+            width: auto;
+        }
+
+        .functions-table-wrapper {
+            width: 737px;
+        }
+
+        .functions-table th {
+            font-size: 15px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+    }
+    /* Моя херня (конец) */
+
 </style>
 <article class="article__slide">
 
@@ -1265,28 +1225,7 @@
 </section>
 
 <section class="calculator">
-    <h2 class="calculator__title">TARIFF PLANS FOR <span>THE CLOUD VERSION</span></h2>
-    <article class="calc-form-wrapper">
-        <span>Fill in the fields to calculate prices</span>
-        <form class="calc-form" id="calc-form" action="#" method="POST">
-            <div class="form-inputs-wrapper">
-                <input class="calc-form-field" id="number_of_recruiters" name="number_of_recruiters" type="number" placeholder="Number of recruiters" aria-label="Number of recruiters">
-                <div class="calc-input-wrapper">
-                    <input class="calc-form-field" id="internal_customers" name="internal_customers" type="number" placeholder="Simultaneous sessions of internal customers" aria-label="Simultaneous sessions of internal customers">
-                    <div class="info-mark">
-                        <div class="hint">
-                            <p>Simultaneous connections to the database by users with roles: internal customer, security department employee, etc. If the number of connections exceeds 50, the price is on request</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-btns-wrapper">
-                <a class="form-btn calc-request" id="calc-request" href="#">Request an invoice</a>
-                <button class="form-btn calc-btn" id="calc-btn" type="button">Сalculate</button>
-            </div>
-        </form>
-    </article>
-    <h2 class="function-table-title">Tariffs and costs</h2>
+    <div class="finger"></div>
     <div class="special-table-wrapper">
         <article class="functions-table-wrapper">
             <table class="functions-table">
@@ -1356,6 +1295,50 @@
                 </tbody>
             </table>
         </article>
+    </div>
+</section>
+
+<section class="management">
+    <div class="section-content-wrapper">
+        <h2>Perfomance & talent management</h2>
+        <div class="management-row-wrapper">
+            <a href="#">
+                <article>
+                    <figure><img src="" alt=""></figure>
+                    <p>Цели и эффективность</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <figure><img src="" alt=""></figure>
+                    <p>Комплексная оценка</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <figure><img src="" alt=""></figure>
+                    <p>Управление вознаграждением</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <figure><img src="" alt=""></figure>
+                    <p>Обучение и развитие</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <figure><img src="" alt=""></figure>
+                    <p>Адаптация и наставничество</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <figure><img src="" alt=""></figure>
+                    <p>Кадровый резерв</p>
+                </article>
+            </a>
+        </div>
     </div>
 </section>
 <!-- Моя херня (конец) -->

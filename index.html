@@ -661,9 +661,9 @@
         background: url(src/img/solutions/list.svg) no-repeat center / 40px;
     }
 
-    /* Секция "Калькулятор" */
+    /* Секция "Модель / функции" */
 
-    .calculator {
+    .model-functions {
         width: 100%;
         padding: 0 60px;
         display: flex;
@@ -806,24 +806,286 @@
 
     /* Секция "Management" */
 
+    .management {
+        padding: 0 60px;
+        margin-top: 50px;
+    }
+
     .management .section-content-wrapper {
         width: 100%;
         max-width: 1140px;
         margin: 0 auto;
     }
 
-    .management .management-row-wrapper {
+    .title-wrapper {
         width: 100%;
         display: flex;
-        gap: 10px;
-        align-items: center;
+        justify-content: center;
+    }
+
+    .title-wrapper h2 {
+        text-align: center;
+        text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .title-wrapper h2:after {
+        content: '';
+        display: block;
+        width: 150px;
+        height: 5px;
+        background-color: #0072bc;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .management .management-row-wrapper {
         width: 100%;
         display: flex;
-        gap: 10px;
-        align-items: center;
+        gap: 15px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    .management .management-row-wrapper > a {
+        width: 174.98px;
+    }
+
+    .management .management-row-wrapper > a article {
+        padding: 80px 20px 20px;
+        position: relative;
+        font-size: 14px;
+        display: block;
+        box-shadow: 0 8px 10px -1px rgba(0, 114, 188, .25);
+        border-radius: 20px;
+        height: 100%;
+        transition: box-shadow .3s;
+    }
+
+    .management .management-row-wrapper > a article:hover {
+        box-shadow: 0 8px 10px -1px rgba(0, 114, 188, .7);
+    }
+
+    .management .management-row-wrapper > a article:before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .arrow-scheme:before {
+        background: url('src/img/management/arrow_scheme.svg') no-repeat center / 40px;
+    }
+
+    .tick-list:before {
+        background: url('src/img/management/tick_list.svg') no-repeat center / 40px;
+    }
+
+    .windows:before {
+        background: url('src/img/management/windows.svg') no-repeat center / 40px;
+    }
+
+    .university-hat:before {
+        background: url('src/img/management/university_hat.svg') no-repeat center / 40px;
+    }
+
+    .hands:before {
+        background: url('src/img/management/hands.svg') no-repeat center / 40px;
+    }
+
+    .resume:before {
+        background: url('src/img/management/resume.svg') no-repeat center / 40px;
+    }
+
+    .kedo:before {
+        background: url('src/img/management/kedo.svg') no-repeat center / 40px;
+    }
+
+    .vacation:before {
+        background: url('src/img/management/vacation.svg') no-repeat center / 40px;
+    }
+
+    .schedule:before {
+        background: url('src/img/management/schedule.svg') no-repeat center / 40px;
+    }
+
+    .cafetery:before {
+        background: url('src/img/management/cafetery.svg') no-repeat center / 40px;
+    }
+
+    .HR-services:before {
+        background: url('src/img/management/HR_services.svg') no-repeat center / 40px;
+    }
+
+    .data-base:before {
+        background: url('src/img/management/data_base.svg') no-repeat center / 40px;
+    }
+
+    .org-design:before {
+        background: url('src/img/management/org_design.svg') no-repeat center / 40px;
+    }
+
+    .crm:before {
+        background: url('src/img/management/crm.svg') no-repeat center / 40px;
+    }
+
+    .control:before {
+        background: url('src/img/management/control.svg') no-repeat center / 40px;
+    }
+
+    .marketplace:before {
+        background: url('src/img/management/marketplace.svg') no-repeat center / 40px;
+    }
+
+    .ai:before {
+        background: url('src/img/management/ai.svg') no-repeat center / 40px;
+    }
+
+    .video-interview:before {
+        background: url('src/img/management/video_interview.svg') no-repeat center / 40px;
+    }
+
+    .agreement-constructor:before {
+        background: url('src/img/management/agreement_constructor.svg') no-repeat center / 40px;
+    }
+
+    .widget-constructor:before {
+        background: url('src/img/management/widgets_constructor.svg') no-repeat center / 40px;
+    }
+
+    .reports-constructor:before {
+        background: url('src/img/management/reports_constructor.svg') no-repeat center / 40px;
+    }
+
+    .check-candidates:before {
+        background: url('src/img/management/check_candidate.svg') no-repeat center / 40px;
+    }
+
+    .fot:before {
+        background: url('src/img/management/fot.svg') no-repeat center / 40px;
+    }
+
+    .salary-rewatch:before {
+        background: url('src/img/management/salary_rewatch.svg') no-repeat center / 40px;
+    }
+
+    /* Секция "Ключевые эффекты" */
+
+    .key-effects {
+        padding: 0 60px;
+        position: relative;
+    }
+
+    .key-effects .arrow-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .key-effects .arrow-wrapper > .swiper-nav-btn {
+        top: calc(100% + 30px);
+        width: 30px;
+        height: 30px;
+    }
+
+    .key-effects .swiper {
+        margin-top: 40px;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    .key-effects .swiper-wrapper {
+        flex-wrap: wrap;
+        gap: 15px 1px;
+    }
+
+    .key-effects .swiper-slide {
+        width: 407px;
+        border-radius: 20px;
+        box-shadow: 0 8px 10px -1px rgba(0, 114, 188, .25);
+        height: auto;
+        padding: 30px 40px 30px 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .key-effects .swiper-slide h3 {
+        font-size: 15px;
+        color: #0072bc;
+        font-weight: 500;
+    }
+
+    .key-effects .swiper-slide h3 > span {
+        font-weight: 600;
+        font-size: 17px;
+    }
+
+    .key-effects .swiper-slide p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .key-effects .swiper-slide:before {
+        content: '';
+        display: block;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+    }
+
+    .key-effects .production_increase:before {
+        background: url('src/img/key_effects/production_increase.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .uneffect:before {
+        background: url('src/img/key_effects/uneffect.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .decrease_cost:before {
+        background: url('src/img/key_effects/decrease_cost.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .priority:before {
+        background: url('src/img/key_effects/priority.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .solutions_accepted:before {
+        background: url('src/img/key_effects/solutions_accepted.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .effectivity:before {
+        background: url('src/img/key_effects/effectivity.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .first_six_months:before {
+        background: url('src/img/key_effects/first_six_months.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .hold:before {
+        background: url('src/img/key_effects/hold.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .closing:before {
+        background: url('src/img/key_effects/closing.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .new_role_effectivity:before {
+        background: url('src/img/key_effects/new_role_effectivity.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .time_economy:before {
+        background: url('src/img/key_effects/time_economy.svg') no-repeat center / 70px;
+    }
+
+    .key-effects .swiper-nav-btn {
+        display: none;
     }
 
     /* Моя херня (конец) */
@@ -899,6 +1161,21 @@
     }
 
     /* Моя херня (начало) */
+    @media screen and (max-width: 865px) {
+        .management,
+        .key-effects {
+            padding: 0 20px;
+        }
+
+        .key-effects .swiper-wrapper {
+            flex-wrap: nowrap;
+        }
+
+        .key-effects .swiper-nav-btn {
+            display: block;
+        }
+    }
+
     @media screen and (max-width: 769px) {
         .advantages-content {
             flex-direction: column;
@@ -939,10 +1216,6 @@
 
         .functions-table-wrapper {
             padding: 0 20px;
-        }
-
-        .calculator {
-            padding: 0;
         }
     }
 
@@ -1224,7 +1497,7 @@
     </div>
 </section>
 
-<section class="calculator">
+<section class="model-functions">
     <div class="finger"></div>
     <div class="special-table-wrapper">
         <article class="functions-table-wrapper">
@@ -1300,45 +1573,213 @@
 
 <section class="management">
     <div class="section-content-wrapper">
-        <h2>Perfomance & talent management</h2>
+        <div class="title-wrapper">
+            <h2>Perfomance & talent management</h2>
+        </div>
         <div class="management-row-wrapper">
             <a href="#">
-                <article>
-                    <figure><img src="" alt=""></figure>
+                <article class="arrow-scheme">
                     <p>Цели и эффективность</p>
                 </article>
             </a>
             <a href="#">
-                <article>
-                    <figure><img src="" alt=""></figure>
+                <article class="tick-list">
                     <p>Комплексная оценка</p>
                 </article>
             </a>
             <a href="#">
-                <article>
-                    <figure><img src="" alt=""></figure>
+                <article class="windows">
                     <p>Управление вознаграждением</p>
                 </article>
             </a>
             <a href="#">
-                <article>
-                    <figure><img src="" alt=""></figure>
+                <article class="university-hat">
                     <p>Обучение и развитие</p>
                 </article>
             </a>
             <a href="#">
-                <article>
-                    <figure><img src="" alt=""></figure>
+                <article class="hands">
                     <p>Адаптация и наставничество</p>
                 </article>
             </a>
             <a href="#">
-                <article>
-                    <figure><img src="" alt=""></figure>
+                <article class="resume">
                     <p>Кадровый резерв</p>
                 </article>
             </a>
         </div>
+        <div class="title-wrapper">
+            <h2>HR-сервисы самообслуживаниЯ</h2>
+        </div>
+        <div class="management-row-wrapper">
+            <a href="#">
+                <article class="kedo">
+                    <p>КЭДО</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="vacation">
+                    <p>График отпусков</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="schedule">
+                    <p>Рабочий график</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="cafetery">
+                    <p>Кафетерий льгот</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="HR-services">
+                    <p>Доступ к HR-сервисам</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="data-base">
+                    <p>База знаний</p>
+                </article>
+            </a>
+        </div>
+        <div class="title-wrapper">
+            <h2>прочие HR-Функции</h2>
+        </div>
+        <div class="management-row-wrapper">
+            <a href="#">
+                <article class="org-design">
+                    <p>Организационный дизайн</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="crm">
+                    <p>CRM для рекрутера</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="control">
+                    <p>Управление вовлеченностью</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="marketplace">
+                    <p>Маркетплейс талантов</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="ai">
+                    <p>ИИ, виртуальные помощники</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="video-interview">
+                    <p>Видеоинтервью</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="agreement-constructor">
+                    <p>Конструктор согласований</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="widget-constructor">
+                    <p>Конструктор виджетов</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="reports-constructor">
+                    <p>Конструктор отчетов</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="check-candidates">
+                    <p>Проверка кандидатов</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="fot">
+                    <p>Бюджетирование ФОТ</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="salary-rewatch">
+                    <p>Пересмотр заработных плат</p>
+                </article>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="key-effects">
+    <div class="title-wrapper">
+        <div class="arrow-wrapper">
+            <h2>Ключевые экономические эффекты по Performance management (KPI, OKR, MBO)</h2>
+            <div class="swiper-nav-btn swiper-button-prev performance-management-prev"></div>
+            <div class="swiper-nav-btn swiper-button-next performance-management-next"></div>
+        </div>
+    </div>
+    <div class="swiper performance-management" id="performance-management">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide production_increase">
+                <h3>ПОВЫШЕНИЕ ПРОДУКТИВНОСТИ<br><span>НА 50%</span></h3>
+                <p>На 50% выше показатели выполнения планов у компаний, внедривших OKR и KPI-платформы.</p>
+            </div>
+            <div class="swiper-slide uneffect">
+                <h3>СОКРАЩЕНИЕ НЕЭФФЕКТИВНЫХ<br><span>ЗАТРАТ НА 15–20%</span></h3>
+                <p>Использование KPI и регулярной аналитики помогает выявлять и устранять неэффективные процессы, сокращая потери в подразделениях на 15-20%</p>
+            </div>
+            <div class="swiper-slide decrease_cost">
+                <h3>СНИЖЕНИЕ ЗАТРАТ НА УПРАВЛЕНИЕ<br><span>ДО 30%</span></h3>
+                <p>Автоматизация процессов Performance Management позволяет освободить до 30% времени руководителей и HR, снижая административные издержки на управление целями и оценками.</p>
+            </div>
+            <div class="swiper-slide priority">
+                <h3><span>72% СОТРУДНИКОВ</span><br>ПОНИМАЮТ ПРИОРИТЕТЫ</h3>
+                <p>На 50% выше показатели выполнения планов у компаний, внедривших OKR и KPI-платформы.</p>
+            </div>
+            <div class="swiper-slide solutions_accepted">
+                <h3>РЕШЕНИЯ ПРИНИМАЮТСЯ<br><span>В 2,5 РАЗА БЫСТРЕЕ</span></h3>
+                <p>Автоматизация Performance Management позволяет оперативно отслеживать прогресс по целям и принимать управленческие решения без задержек.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="title-wrapper">
+        <div class="arrow-wrapper">
+            <h2>Ключевые экономические эффекты по Talent management</h2>
+            <div class="swiper-nav-btn swiper-button-prev talent-management-prev"></div>
+            <div class="swiper-nav-btn swiper-button-next talent-management-next"></div>
+        </div>
+    </div>
+    <div class="swiper talent-management" id="talent-management">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide effectivity">
+                <h3><span>+35%</span><br>ЭФФЕКТИВНОСТИ ПРОГРАММ ОБУЧЕНИЯ</h3>
+                <p>Автоматизация процесса управления талантами ускоряет развитие навыков, повышая эффективность обучения и внутреннего карьерного роста на 35%</p>
+            </div>
+            <div class="swiper-slide first_six_months">
+                <h3><span>–58%</span><br>ТЕКУЧЕСТЬ В ПЕРВЫЕ 6 МЕСЯЦЕВ</h3>
+                <p>Компании с выстроенной системой адаптации теряют вдвое меньше сотрудников в первые полгода. Это снижает затраты на повторный найм и обучение.</p>
+            </div>
+            <div class="swiper-slide hold">
+                <h3><span>+30% УДЕРЖАНИЕ</span><br>ПЕРСПЕКТИВНЫХ СОТРУДНИКОВ</h3>
+                <p>Сотрудники, которые видят прозрачный карьерный путь внутри компании, на 30% чаще остаются в организации дольше 3 лет — это снижает текучесть и затраты на замену.</p>
+            </div>
+            <div class="swiper-slide closing">
+                <h3>ЗАКРЫТИЕ КРИТИЧНЫХ ВАКАНСИЙ<br><span>В 2 РАЗА БЫСТРЕЕ</span></h3>
+                <p>Наличие кадрового резерва, построенного на карьерных треках, позволяет быстрее реагировать на уход ключевых сотрудников и избегать срывов процессов.</p>
+            </div>
+            <div class="swiper-slide new_role_effectivity">
+                <h3><span>+22% ЭФФЕКТИВНОСТИ</span><br>ПРИ ПЕРЕВОДЕ НА НОВУЮ РОЛЬ</h3>
+                <p>Сотрудники, прошедшие развитие по индивидуальному плану, демонстрируют более уверенный старт и меньшую адаптационную просадку при переходе на новую позицию.</p>
+            </div>
+            <div class="swiper-slide time_economy">
+                <h3><span>ЭКОНОМИЯ ДО 30% ВРЕМЕНИ</span><br>НА СОГЛАСОВАНИЕ ОБУЧЕНИЯ</h3>
+                <p>Автоматизация ИПР снижает нагрузку на HR и руководителей — все шаги развития фиксируются в системе, маршруты и треки создаются по шаблонам.</p>
+            </div>
+        </div>
+
+
     </div>
 </section>
 <!-- Моя херня (конец) -->

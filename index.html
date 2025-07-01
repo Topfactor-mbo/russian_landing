@@ -1146,6 +1146,109 @@
         background: url('src/img/management/salary_rewatch.svg') no-repeat center / 40px;
     }
 
+    /* Секция "Кастомизация" */
+
+    .customization {
+        margin-top: 80px;
+    }
+
+    .customization .advantages-article.text div:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+
+    .customization .advantages-article.text div:last-child {
+        margin-top: 31px;
+    }
+
+    .customization .advantages-content {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .customization .advantages-article.img {
+        flex-shrink: 0;
+    }
+
+    .customization .advantages-article.text {
+        width: 406px;
+    }
+
+    /* SAAS */
+
+    .SAAS {
+        border-radius: 50px;
+        overflow: hidden;
+        padding-bottom: 40px;
+    }
+
+    .SAAS .SAAS-cards {
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        padding: 100px 60px 0;
+    }
+
+    .SAAS .SAAS-card {
+        width: 100%;
+        max-width: 550px;
+        background-color: #fff;
+        overflow: hidden;
+        border-radius: 30px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #dedada;
+    }
+
+    .SAAS .SAAS-card .card-tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .SAAS .SAAS-card .card-tag {
+        display: block;
+        padding: 7px 15px;
+        border: 1.5px solid #dedada;
+        border-radius: 20px;
+        font-size: 15px;
+    }
+
+    .SAAS .SAAS-card h2 {
+        color: #0072bc;
+        text-transform: uppercase;
+        font-size: 32px;
+        margin-top: 80px;
+        font-weight: 500;
+    }
+
+    .SAAS .SAAS-card ul {
+        margin: 45px 0 80px;
+    }
+
+    .SAAS .SAAS-card ul li {
+        list-style-type: none;
+        font-size: 21px;
+        font-family: Arial, sans-serif;
+    }
+
+    .SAAS .SAAS-card ul li:not(:first-child) {
+        margin-top: 12px;
+    }
+
+    .SAAS .SAAS-card .card-btn-block {
+        margin-top: auto;
+    }
+
+    .SAAS .SAAS-card .connect-btn {
+        width: 100%;
+        color: #0072bc;
+        border: 1px solid #0072bc;
+        border-radius: 7px;
+        padding: 10px 20px;
+        background-color: #fff;
+    }
+
     /* Моя херня (конец) */
 
     @media screen and (max-width: 1350px) {
@@ -1219,6 +1322,22 @@
     }
 
     /* Моя херня (начало) */
+    @media screen and (max-width: 1070px) {
+        .customization .advantages-content {
+            justify-content: center;
+        }
+
+        .customization .advantages-article.text {
+            width: auto;
+            padding: 0 60px;
+        }
+
+        .customization .advantages-article.img {
+            flex-shrink: initial;
+            padding: 0 60px;
+        }
+    }
+
     @media screen and (max-width: 865px) {
         .management,
         .key-effects,
@@ -1248,6 +1367,10 @@
             flex-direction: column;
         }
 
+        .customization .advantages-content {
+            flex-direction: row;
+        }
+
         .want-demo {
             display: block;
             width: 100%;
@@ -1255,6 +1378,16 @@
 
         .finger {
             display: block;
+        }
+
+        .customization .advantages-article.text,
+        .customization .advantages-article.img {
+            padding: 0 20px;
+        }
+
+        .SAAS .SAAS-cards {
+            flex-wrap: wrap;
+            padding: 100px 20px 0;
         }
     }
 
@@ -1619,68 +1752,68 @@
         <article class="functions-table-wrapper">
             <table class="functions-table">
                 <thead>
-                <tr>
-                    <th>Модуль / Функции</th>
-                    <th><span>SAP SuccessFactors / Workday</span></th>
-                    <th><span>ТопФактор HRM</span></th>
-                </tr>
+                    <tr>
+                        <th>Модуль / Функции</th>
+                        <th><span>SAP SuccessFactors / Workday</span></th>
+                        <th><span>ТопФактор HRM</span></th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td><span>Управление целями и результативностью</span></td>
-                    <td class="tick"><span>Performance Management</span></td>
-                    <td class="tick"><span>SMART-цели, карты целей, 1-on-1 встречи</span></td>
-                </tr>
-                <tr>
-                    <td><span>Развитие и обучение сотрудников</span></td>
-                    <td class="tick"><span>Learning / Development Plans</span></td>
-                    <td class="tick"><span>ИПР, развитие, планы преемственности</span></td>
-                </tr>
-                <tr>
-                    <td><span>Оценка сотрудников</span></td>
-                    <td class="tick"><span>360 Feedback, Competency Review</span></td>
-                    <td class="tick"><span>Оценка по KPI, компетенциям, 360 градусов</span></td>
-                </tr>
-                <tr>
-                    <td><span>Управление компенсациями и премиями</span></td>
-                    <td class="tick"><span>Variable Pay / Compensation</span></td>
-                    <td class="tick"><span>Расчёт KPI-премий, пересмотр ЗП</span></td>
-                </tr>
-                <tr>
-                    <td><span>Расчёт заработной платы</span></td>
-                    <td class="tick"><span>Payroll</span></td>
-                    <td class="tick"><span>Модуль расчёта зарплаты (интеграция с 1С)</span></td>
-                </tr>
-                <tr>
-                    <td><span>Оргструктура и кадровый учёт</span></td>
-                    <td class="tick"><span>Employee Central</span></td>
-                    <td class="tick"><span>Управление оргструктурой, обмен с 1С:ЗУП</span></td>
-                </tr>
-                <tr>
-                    <td><span>Кадровый электронный документооборот (КЭДО)</span></td>
-                    <td class="cross"><span>Частично (через партнёров)</span></td>
-                    <td class="tick"><span>Встроенный модуль КЭДО</span></td>
-                </tr>
-                <tr>
-                    <td><span>HR-аналитика и отчёты</span></td>
-                    <td class="tick"><span>Встроенная / через BI</span></td>
-                    <td class="tick"><span>Интерактивные дашборды и конструктор отчетов</span></td>
-                </tr>
-                <tr>
-                    <td><span>Опросы и вовлечённость сотрудников</span></td>
-                    <td class="tick"><span>Engagement Surveys</span></td>
-                    <td class="tick"><span>Опросы, индекс вовлечённости, eNPS</span></td>
-                </tr>
-                <tr>
-                    <td><span>Рекрутмент и адаптация (onboarding)</span></td>
-                    <td class="tick"><span>Recruitment</span></td>
-                    <td class="tick"><span>Модули для подбора и адаптации</span></td>
-                </tr>
-                <tr>
-                    <td><span>Корпоративная база знаний / LMS</span></td>
-                    <td class="tick"><span>Через LMS-платформу</span></td>
-                    <td class="tick"><span>Встроенная Wiki / интеграция с обучающими платформами</span></td>
-                </tr>
+                    <tr>
+                        <td><span>Управление целями и результативностью</span></td>
+                        <td class="tick"><span>Performance Management</span></td>
+                        <td class="tick"><span>SMART-цели, карты целей, 1-on-1 встречи</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Развитие и обучение сотрудников</span></td>
+                        <td class="tick"><span>Learning / Development Plans</span></td>
+                        <td class="tick"><span>ИПР, развитие, планы преемственности</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Оценка сотрудников</span></td>
+                        <td class="tick"><span>360 Feedback, Competency Review</span></td>
+                        <td class="tick"><span>Оценка по KPI, компетенциям, 360 градусов</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Управление компенсациями и премиями</span></td>
+                        <td class="tick"><span>Variable Pay / Compensation</span></td>
+                        <td class="tick"><span>Расчёт KPI-премий, пересмотр ЗП</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Расчёт заработной платы</span></td>
+                        <td class="tick"><span>Payroll</span></td>
+                        <td class="tick"><span>Модуль расчёта зарплаты (интеграция с 1С)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Оргструктура и кадровый учёт</span></td>
+                        <td class="tick"><span>Employee Central</span></td>
+                        <td class="tick"><span>Управление оргструктурой, обмен с 1С:ЗУП</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Кадровый электронный документооборот (КЭДО)</span></td>
+                        <td class="cross"><span>Частично (через партнёров)</span></td>
+                        <td class="tick"><span>Встроенный модуль КЭДО</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>HR-аналитика и отчёты</span></td>
+                        <td class="tick"><span>Встроенная / через BI</span></td>
+                        <td class="tick"><span>Интерактивные дашборды и конструктор отчетов</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Опросы и вовлечённость сотрудников</span></td>
+                        <td class="tick"><span>Engagement Surveys</span></td>
+                        <td class="tick"><span>Опросы, индекс вовлечённости, eNPS</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Рекрутмент и адаптация (onboarding)</span></td>
+                        <td class="tick"><span>Recruitment</span></td>
+                        <td class="tick"><span>Модули для подбора и адаптации</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Корпоративная база знаний / LMS</span></td>
+                        <td class="tick"><span>Через LMS-платформу</span></td>
+                        <td class="tick"><span>Встроенная Wiki / интеграция с обучающими платформами</span></td>
+                    </tr>
                 </tbody>
             </table>
         </article>
@@ -1886,6 +2019,82 @@
                 </article>
             </a>
         </div>
+    </div>
+</section>
+
+<section class="customization">
+    <div class="header-article">
+        <h2>ВЕСЬ ФУНКЦИОНАЛ — <span>В ОДНОМ ОКНЕ</span></h2>
+        <span class="header-article-slogan">Подзаголовок с кратким описанием</span>
+    </div>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="advantages-content">
+                    <article class="advantages-article img">
+                        <figure>
+                            <img src="src/img/customization.png" alt="result">
+                        </figure>
+                    </article>
+                    <article class="advantages-article text">
+                        <div>
+                            <h3>İş ilanına en dogru aday</h3>
+                            <p>Çalışanların kolay değerlendirilmesi. Yetkinlik modeli ve pozisyon profiline uygunluk. Kişisel niteliklerin ve becerilerin değerlendirilmesinde yapay zeka kullanın.</p>
+                        </div>
+                        <div>
+                            <h3>İş ilanına en dogru aday</h3>
+                            <p>Çalışanların kolay değerlendirilmesi. Yetkinlik modeli ve pozisyon profiline uygunluk. Kişisel niteliklerin ve becerilerin değerlendirilmesinde yapay zeka kullanın.</p>
+                        </div>
+                        <div>
+                            <h3>İş ilanına en dogru aday</h3>
+                            <p>Çalışanların kolay değerlendirilmesi. Yetkinlik modeli ve pozisyon profiline uygunluk. Kişisel niteliklerin ve becerilerin değerlendirilmesinde yapay zeka kullanın.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="SAAS">
+    <div class="SAAS-cards">
+        <article class="SAAS-card">
+            <div class="card-tags">
+                <span class="card-tag">quickly</span>
+                <span class="card-tag">cloud</span>
+            </div>
+            <div class="card-content">
+                <h2>SAAS</h2>
+                <ul>
+                    <li>Quick launch</li>
+                    <li>SaaS in the cloud storage</li>
+                    <li>Implementation up to 1 month</li>
+                    <li>Use a standard methodology</li>
+                    <li>Proper for remote and hybrid teams</li>
+                </ul>
+            </div>
+            <div class="card-btn-block">
+                <button class="demo-btn connect-btn" data-form_id="1" type="button">Оставить заявку</button>
+            </div>
+        </article>
+        <article class="SAAS-card">
+            <div class="card-tags">
+                <span class="card-tag">independency</span>
+            </div>
+            <div class="card-content">
+                <h2>On-Premise</h2>
+                <ul>
+                    <li>100% independency</li>
+                    <li>On-Premise solution on corp servers</li>
+                    <li>Matching with company compliance</li>
+                    <li>Your personal and commercial data is on your servers</li>
+                    <li>Deep integration with corporate IT-infrastructure</li>
+                </ul>
+            </div>
+            <div class="card-btn-block">
+                <button class="demo-btn connect-btn" data-form_id="1" type="button">Оставить заявку</button>
+            </div>
+        </article>
     </div>
 </section>
 <!-- Моя херня (конец) -->

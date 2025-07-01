@@ -673,7 +673,7 @@
     .finger {
         display: none;
         position: absolute;
-        bottom: calc(100% + 10px);
+        top: 126px;
         right: 60px;
         background: url('src/img/calculator/finger.svg') no-repeat center / 40px;
         width: 40px;
@@ -685,6 +685,7 @@
         padding: 0 10px 10px 0;
         width: 100%;
         max-width: 1145px;
+        margin-top: 40px;
     }
 
     .functions-table-wrapper {
@@ -867,36 +868,8 @@
         position: absolute;
     }
 
-    .key-effects .decrease_hiring_cost:before {
-        background: url('src/img/key_effects/decrease_hiring_cost.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .recruiter_productivity:before {
-        background: url('src/img/key_effects/recruiter_productivity.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .trainee_turnover:before {
-        background: url('src/img/key_effects/trainee_turnover.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .vacancy_closing:before {
-        background: url('src/img/key_effects/vacancy_closing.svg') no-repeat center / 70px;
-    }
-
     .key-effects .production_increase:before {
         background: url('src/img/key_effects/production_increase.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .uneffect:before {
-        background: url('src/img/key_effects/uneffect.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .decrease_cost:before {
-        background: url('src/img/key_effects/decrease_cost.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .priority:before {
-        background: url('src/img/key_effects/priority.svg') no-repeat center / 70px;
     }
 
     .key-effects .solutions_accepted:before {
@@ -907,10 +880,6 @@
         background: url('src/img/key_effects/target_effect.svg') no-repeat center / 70px;
     }
 
-    .key-effects .supplies_economy:before {
-        background: url('src/img/key_effects/supplies_economy.svg') no-repeat center / 70px;
-    }
-
     .key-effects .effectivity:before {
         background: url('src/img/key_effects/effectivity.svg') no-repeat center / 70px;
     }
@@ -919,56 +888,8 @@
         background: url('src/img/key_effects/first_six_months.svg') no-repeat center / 70px;
     }
 
-    .key-effects .hold:before {
-        background: url('src/img/key_effects/hold.svg') no-repeat center / 70px;
-    }
-
     .key-effects .closing:before {
         background: url('src/img/key_effects/closing.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .new_role_effectivity:before {
-        background: url('src/img/key_effects/new_role_effectivity.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .time_economy:before {
-        background: url('src/img/key_effects/time_economy.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .administrative_time:before {
-        background: url('src/img/key_effects/administrative_time.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .employee_satisfaction:before {
-        background: url('src/img/key_effects/employee_satisfaction.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .time_to_prepare:before {
-        background: url('src/img/key_effects/time_to_prepare.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .request_speed:before {
-        background: url('src/img/key_effects/request_speed.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .errors_decrease:before {
-        background: url('src/img/key_effects/errors_decrease.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .employee_hold:before {
-        background: url('src/img/key_effects/employee_hold.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .absenteism:before {
-        background: url('src/img/key_effects/absenteism.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .sustained_engagement:before {
-        background: url('src/img/key_effects/sustained_engagement.svg') no-repeat center / 70px;
-    }
-
-    .key-effects .util:before {
-        background: url('src/img/key_effects/util.svg') no-repeat center / 70px;
     }
 
     .key-effects .swiper-nav-btn {
@@ -1253,6 +1174,13 @@
         border-radius: 7px;
         padding: 10px 20px;
         background-color: #fff;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .SAAS .SAAS-card .connect-btn:hover {
+        color: #fff;
+        background-color: #0072bc;
     }
 
     /* Моя херня (конец) */
@@ -1447,6 +1375,10 @@
             font-size: 33px;
         }
 
+        .finger {
+            top: 137px;
+        }
+
         .functions-table th, .functions-table td {
             width: auto;
         }
@@ -1516,6 +1448,10 @@
         .management .management-row-wrapper > a article:before {
             top: 11px;
         }
+
+        .finger {
+            top: 187px;
+        }
     }
     /* Моя херня (конец) */
 
@@ -1547,7 +1483,7 @@
 <section class="slider-section">
     <div class="header-article">
         <h2>ВЕСЬ ФУНКЦИОНАЛ — <span>В ОДНОМ ОКНЕ</span></h2>
-        <span class="header-article-slogan">Подзаголовок с кратким описанием</span>
+        <span class="header-article-slogan">Единый интерфейс: интеграции и данные стекаются в одну точку, все модули системы доступны из одного окна. Бесшовная навигация между процессами без необходимости переходить в отдельные системы. Поддерживается доступ с ПК и мобильных устройств — удобно как офисным, так и удаленным сотрудникам.</span>
     </div>
     <div class="swiper thumbs-slider-wrapper">
         <div class="swiper-wrapper">
@@ -1580,7 +1516,7 @@
                             <p>Инструменты для индивидуальных встреч по постановке целей и развитию. Возможность онлайн-диалогов, видеосозвонов и оффлайн-сценариев</p>
                         </div>
                         <div>
-                            <a class="more-btn want-demo" href="products/teamrecruit.html">Хочу демо</a>
+                            <a class="more-btn want-demo" href="#">Хочу демо</a>
                         </div>
                     </article>
                     <article class="advantages-article img">
@@ -1609,7 +1545,7 @@
                             <p>Пересмотр зарплаты в соответствии с рыночными условиями, результативностью и развитием компетенций сотрудников. Прозрачный механизм принятия решений о повышении заработной платы</p>
                         </div>
                         <div>
-                            <a class="more-btn want-demo" href="products/teamrecruit.html">Хочу демо</a>
+                            <a class="more-btn want-demo" href="#">Хочу демо</a>
                         </div>
                     </article>
                     <article class="advantages-article img">
@@ -1642,7 +1578,7 @@
                             <p>Развитие сильных сотрудников и поддержка тех, кто временно неэффективен — без потерь для бизнеса</p>
                         </div>
                         <div>
-                            <a class="more-btn want-demo" href="products/teamrecruit.html">Хочу демо</a>
+                            <a class="more-btn want-demo" href="#">Хочу демо</a>
                         </div>
                     </article>
                     <article class="advantages-article img">
@@ -1667,7 +1603,7 @@
                             <p>Построение актуальной оргструктуры компании. Возможность решения задач организационного дизайна в рамках системы. Корректное каскадирование целей, маршрутизация задач и построение отчетности</p>
                         </div>
                         <div>
-                            <a class="more-btn want-demo" href="products/teamrecruit.html">Хочу демо</a>
+                            <a class="more-btn want-demo" href="#">Хочу демо</a>
                         </div>
                     </article>
                     <article class="advantages-article img">
@@ -1692,7 +1628,7 @@
                             <p>Можно самостоятельно создавать любые формы отчетности. Гибкая настройка: выбор показателей, фильтров, визуализации, логики расчетов.</p>
                         </div>
                         <div>
-                            <a class="more-btn want-demo" href="products/teamrecruit.html">Хочу демо</a>
+                            <a class="more-btn want-demo" href="#">Хочу демо</a>
                         </div>
                     </article>
                     <article class="advantages-article img">
@@ -1721,7 +1657,7 @@
                             <p>Весь путь кандидата — от отклика до трудоустройства — в одной системе. Включает CRM, мессенджеры, чат-боты, видеоинтервью и согласования.</p>
                         </div>
                         <div>
-                            <a class="more-btn want-demo" href="products/teamrecruit.html">Хочу демо</a>
+                            <a class="more-btn want-demo" href="#">Хочу демо</a>
                         </div>
                     </article>
                     <article class="advantages-article img">
@@ -1769,6 +1705,10 @@
 </section>
 
 <section class="model-functions">
+    <div class="header-article">
+        <h2><span>ИМПОРТОНЕЗАВИСИМАЯ</span> HRM-СИСТЕМА</h2>
+        <span class="header-article-slogan">Полноценная альтернатива SAP SuccessFactors и другим зарубежным HCM-системам</span>
+    </div>
     <div class="finger"></div>
     <div class="special-table-wrapper">
         <article class="functions-table-wrapper">

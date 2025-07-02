@@ -575,6 +575,7 @@
 
     .header-article > h2 > span {
         color: #0072bc;
+        word-break: break-word;
     }
 
     .header-article-slogan {
@@ -804,7 +805,7 @@
     /* Секция "Ключевые эффекты" */
 
     .key-effects {
-        margin-top: 40px;
+        margin-top: 80px;
         padding: 0 60px;
         position: relative;
     }
@@ -912,27 +913,13 @@
     .title-wrapper {
         width: 100%;
         display: flex;
-        justify-content: center;
     }
 
     .title-wrapper h2 {
         text-align: center;
         text-transform: uppercase;
         display: inline-block;
-        position: relative;
         margin-top: 50px;
-    }
-
-    .title-wrapper h2:after {
-        content: '';
-        display: block;
-        width: 150px;
-        height: 5px;
-        background-color: #0072bc;
-        position: absolute;
-        top: calc(100% + 10px);
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .management .management-row-wrapper {
@@ -1070,10 +1057,7 @@
 
     /* Секция "Кастомизация" */
 
-    .customization {
-        margin-top: 80px;
-    }
-
+    .customization,
     .customization .swiper {
         margin-top: 40px;
     }
@@ -1183,6 +1167,87 @@
         background-color: #0072bc;
     }
 
+    /* get to know */
+
+    .get-to-know {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        position: relative;
+        padding-bottom: 60px;
+        margin-top: 80px;
+    }
+
+    .get-to-know .title-block h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .get-to-know p {
+        text-align: center;
+        width: 350px;
+    }
+
+    .get-to-know .main-btn-view {
+        background-color: #0072bc;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 15px 40px;
+        border-radius: 8px;
+        color: #fff;
+    }
+
+    /* Секция POST-additions */
+
+    .POST-additions {
+        width: 100%;
+        margin-top: 80px;
+        background-color: #E6F1F9;
+        padding: 45px 60px;
+    }
+
+    .POST-wrapper {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        max-width: 1140px;
+    }
+
+    .POST-additions span {
+        font-weight: 600;
+        display: block;
+        margin-right: auto;
+        font-size: 21px;
+    }
+
+    .POST-additions__btn {
+        border: 1px solid #0072bc;
+        background-color: transparent;
+        outline: none;
+        border-radius: 8px;
+        padding: 15px 40px;
+        cursor: pointer;
+        color: #fff;
+        white-space: nowrap;
+    }
+    
+    .POST-additions__btn.demo-btn {
+        background-color: #0072bc;
+    }
+
+    .POST-additions__btn.contact {
+        color: #0072bc;
+    }
+
+    .management + .POST-additions {
+        background-color: #fff;
+        margin-top: 60px;
+    }
+    
     /* Моя херня (конец) */
 
     @media screen and (max-width: 1350px) {
@@ -1285,6 +1350,10 @@
 
         .key-effects .swiper-nav-btn {
             display: block;
+            width: 24px;
+            height: 24px;
+            top: auto;
+            bottom: 160px;
         }
 
         .advantages-article.text {
@@ -1350,6 +1419,10 @@
         .solutions .solution > p {
             height: auto;
         }
+
+        .key-effects .swiper-nav-btn {
+            bottom: 180px;
+        }
     }
 
     @media screen and (max-width: 585px) {
@@ -1367,6 +1440,14 @@
 
         .functions-table-wrapper {
             padding: 0 20px;
+        }
+
+        .POST-wrapper {
+            flex-wrap: wrap;
+        }
+
+        .POST-additions__btn {
+            width: 100%;
         }
     }
 
@@ -1412,6 +1493,10 @@
         .solutions .solution > p {
             font-size: 15px;
         }
+
+        .key-effects .swiper-nav-btn {
+            bottom: 210px;
+        }
     }
 
     @media screen and (max-width: 376px) {
@@ -1429,6 +1514,10 @@
 
         .management .management-row-wrapper > a article {
             padding: 20px 20px 20px 60px;
+        }
+
+        .key-effects .swiper-nav-btn {
+            bottom: 230px;
         }
     }
 
@@ -1451,6 +1540,10 @@
 
         .finger {
             top: 187px;
+        }
+
+        .key-effects .swiper-nav-btn {
+            bottom: 280px;
         }
     }
     /* Моя херня (конец) */
@@ -1782,6 +1875,14 @@
     </div>
 </section>
 
+<section class="get-to-know">
+    <div class="title-block">
+        <h2>Протестируйте ТопФактор</h2>
+    </div>
+    <p>Отправьте запрос на бесплатную персональную демонстрацию системы</p>
+    <button class="main-btn-view demo-btn" data-form_id="1" data-property="demo_modal" data-modal-property="team-recruit-en_demo_modal">Отправить заявку на демо</button>
+</section>
+
 <section class="customization">
     <div class="header-article">
         <h2><span>КАСТОМИЗАЦИЯ</span> СИСТЕМЫ ПОД ВАШ ЗАПРОС</h2>
@@ -1817,12 +1918,11 @@
 </section>
 
 <section class="key-effects">
-    <div class="title-wrapper">
-        <div class="arrow-wrapper">
-            <h2>Ключевые экономические эффекты</h2>
-            <div class="swiper-nav-btn swiper-button-prev performance-management-prev"></div>
-            <div class="swiper-nav-btn swiper-button-next performance-management-next"></div>
-        </div>
+    <div class="header-article">
+        <h2><span>КЛЮЧЕВЫЕ</span> ЭКОНОМИЧЕСКИЕ ЭФФЕКТЫ</h2>
+        <span class="header-article-slogan">Автоматизация HR-процессов приносит измеримые результаты, что подтверждается международными исследованиями: снижение операционных затрат, сокращение времени на рутинные задачи, повышение точности данных и рост вовлеченности сотрудников.</span>
+        <div class="swiper-nav-btn swiper-button-prev performance-management-prev"></div>
+        <div class="swiper-nav-btn swiper-button-next performance-management-next"></div>
     </div>
     <div class="swiper performance-management" id="performance-management">
         <div class="swiper-wrapper">
@@ -1854,7 +1954,65 @@
     </div>
 </section>
 
+<section class="POST-additions">
+    <div class="POST-wrapper">
+        <span>Протестируйте как работает HRM-система ТопФактор</span>
+        <button class="POST-additions__btn main-btn-view demo demo-btn" data-property="demo_modal" type="button">Демонстрация</button>
+        <button class="POST-additions__btn main-btn-view contact" data-property="contact_me" type="button">Задать вопрос</button>
+    </div>
+</section>
+
+<section class="SAAS">
+    <div class="header-article">
+        <h2>ИНТЕГРАЦИЯ <span>SAAS И ON-PREMISE</span></h2>
+        <span class="header-article-slogan">Гибкая настройка HRM-системы позволяет адаптировать её под индивидуальные требования и бизнес-процессы вашей компании</span>
+    </div>
+    <div class="SAAS-cards">
+        <article class="SAAS-card">
+            <div class="card-tags">
+                <span class="card-tag">быстро</span>
+                <span class="card-tag">облако</span>
+            </div>
+            <div class="card-content">
+                <h2>SAAS</h2>
+                <ul>
+                    <li>Быстрый запуск</li>
+                    <li>Размещение в облачном хранилище</li>
+                    <li>Срок внедрения до 1 месяца</li>
+                    <li>Оплата по подписке, гибкая нагрузка</li>
+                    <li>Подходит для удаленных и гибридных команд</li>
+                </ul>
+            </div>
+            <div class="card-btn-block">
+                <button class="demo-btn connect-btn" data-form_id="1" type="button">Оставить заявку</button>
+            </div>
+        </article>
+        <article class="SAAS-card">
+            <div class="card-tags">
+                <span class="card-tag">на серверах компании</span>
+            </div>
+            <div class="card-content">
+                <h2>On-Premise</h2>
+                <ul>
+                    <li>Требуются внутренние IT-ресурсы</li>
+                    <li>Размещение на корпоративных серверах</li>
+                    <li>Соответствие требованиям компании</li>
+                    <li>Единоразовая покупка + поддержка</li>
+                    <li>Глубокая интеграция с корпоративной IT-структурой</li>
+                </ul>
+            </div>
+            <div class="card-btn-block">
+                <button class="demo-btn connect-btn" data-form_id="1" type="button">Оставить заявку</button>
+            </div>
+        </article>
+    </div>
+</section>
+
 <section class="management">
+    <div class="header-article">
+        <h2><span>ПОЛНЫЙ ОБЗОР</span> ФУНКЦИОНАЛА СИСТЕМЫ</h2>
+        <span class="header-article-slogan">Гибкая HRM-система ТопФактор полностью закроет ваши потребности в автоматизации HR-процессов с адаптацией под текущие бизнес-процессы компании</span>
+    </div>
     <div class="section-content-wrapper">
         <div class="title-wrapper">
             <h2>Perfomance & talent management</h2>
@@ -1994,49 +2152,10 @@
     </div>
 </section>
 
-<section class="SAAS">
-    <div class="header-article">
-        <h2>ИНТЕГРАЦИЯ <span>SAAS И ON-PREMISE</span></h2>
-        <span class="header-article-slogan">Гибкая настройка HRM-системы позволяет адаптировать её под индивидуальные требования и бизнес-процессы вашей компании</span>
-    </div>
-    <div class="SAAS-cards">
-        <article class="SAAS-card">
-            <div class="card-tags">
-                <span class="card-tag">быстро</span>
-                <span class="card-tag">облако</span>
-            </div>
-            <div class="card-content">
-                <h2>SAAS</h2>
-                <ul>
-                    <li>Быстрый запуск</li>
-                    <li>Размещение в облачном хранилище</li>
-                    <li>Срок внедрения до 1 месяца</li>
-                    <li>Оплата по подписке, гибкая нагрузка</li>
-                    <li>Подходит для удаленных и гибридных команд</li>
-                </ul>
-            </div>
-            <div class="card-btn-block">
-                <button class="demo-btn connect-btn" data-form_id="1" type="button">Оставить заявку</button>
-            </div>
-        </article>
-        <article class="SAAS-card">
-            <div class="card-tags">
-                <span class="card-tag">на серверах компании</span>
-            </div>
-            <div class="card-content">
-                <h2>On-Premise</h2>
-                <ul>
-                    <li>Требуются внутренние IT-ресурсы</li>
-                    <li>Размещение на корпоративных серверах</li>
-                    <li>Соответствие требованиям компании</li>
-                    <li>Единоразовая покупка + поддержка</li>
-                    <li>Глубокая интеграция с корпоративной IT-структурой</li>
-                </ul>
-            </div>
-            <div class="card-btn-block">
-                <button class="demo-btn connect-btn" data-form_id="1" type="button">Оставить заявку</button>
-            </div>
-        </article>
+<section class="POST-additions">
+    <div class="POST-wrapper">
+        <span>Протестируйте как работает HRM-система ТопФактор</span>
+        <button class="POST-additions__btn main-btn-view contact" data-property="contact_me" type="button">Задать вопрос</button>
     </div>
 </section>
 <!-- Моя херня (конец) -->
